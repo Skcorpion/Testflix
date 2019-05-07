@@ -1,0 +1,976 @@
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  background-color: black;
+  margin: 0;
+  color: #fff;
+  direction: ltr;
+}
+.cf {
+  z-index: 4;
+}
+
+h2, h3, h4, h5 {
+  margin: .75em 0 .25em; 
+}
+
+/* Utility clases */
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.outer-container {
+  padding: 70px 45px;
+  min-height: inherit; /* -140px for all min-heights*/
+  border-bottom: #252529 solid 8px;
+  position: relative;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.625rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 4rem; /* showcase size */
+  line-height: 1.1;
+  margin: .5rem 0 0 0;
+}
+
+.section-title {
+  font-size: 3.125rem;
+}
+
+.section-subtitle {
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+
+.rbt {
+  font-weight: 600;
+  color: rgb(233, 0, 0);
+  text-shadow: 1px 1px 1px #000;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+
+a {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: .7rem 1.2rem;
+}
+
+.btn-primary {
+  font-size: 1.625rem;
+  background-color: #d3071b;
+  border: none;  
+}
+
+.btn-primary:hover {
+  background-color: #e6081e;
+}
+
+.btn-primary:active {
+  background-color: #d3071bda;
+}
+
+.btn-secondary {
+  font-size: 1.25rem;
+  border: #fff solid 1px;
+  background-color: transparent;
+}
+
+.btn-secondary:active {
+  background-color: #e6081e;
+}
+
+/* -------------------------------------------------------------------- */
+/* ------------------------------Showcase------------------------------ */
+/* -------------------------------------------------------------------- */
+
+#showcase {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.7) 50%, rgba(0,0,0,1)),
+              url('../img/showcase.jpg') no-repeat center/cover; 
+  width: 100%;
+  min-height: 692px;
+  position: relative;
+  overflow-y: hidden; /* hide space on the top */
+  border-bottom: #252529 solid 8px;
+}
+
+#showcase .outer-container {
+  border-bottom: none;
+}
+
+#showcase .container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 10.5rem; 
+  text-align: center;
+}
+
+#showcase h2, #showcase span {
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+/* ----------------------------Billing-bar----------------------------- */
+/* -------------------------------------------------------------------- */
+
+#billing-bar {
+  width: 100%;
+  min-height: 530px;
+  overflow-y: hidden;
+}
+
+#billing-bar .container {
+  text-align: center;
+}
+
+/*under the widget*/
+.trial-card-message {
+  max-width: 750px;
+  margin: 1rem auto;
+}
+
+/* -------------Widget----------------- */
+
+.trial-widget {
+  margin: 2rem 0 3rem 0;
+}
+
+/* Baaaaaaaaaar */
+.timeline-bar {
+  position: relative;
+  background: linear-gradient(to right,#00d65f 10%,#308234 50%,#3f3f3f 50%,#3f3f3f 85%,rgba(63,63,63,0) 100%);
+  width: 100%;
+  height: 1.5em;
+  border-radius: .75em 0 0 .75em;
+  margin: .5em .1em 1.25em;
+}
+
+/* two balls */
+.timeline-bar::after,
+.timeline-bar::before {
+  content: '';
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: .75em;
+}
+
+.timeline-bar::after {
+  left: 85%;
+}
+
+.timeline-bar::before {
+  left: 50%;
+}
+
+/* Bottom label + mail icon + vertical line */
+.reminder-label {
+  margin-left: -3.5em;
+  width: 33%;
+  padding-left: 0.4em;
+  position: relative;
+  left: 50%;
+  text-align: left;
+}
+
+.reminder-label::after {
+  position: absolute;
+  top: -2.75em;
+  left: .75em;
+  height: 2.5em;
+  width: 2px;
+  background: #d8d8d8;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  content: '';
+}
+
+/* Top labels */
+
+.timeline-labels {
+  position: relative;
+}
+
+/*left*/
+.free-trial-text {
+  position: absolute;
+  width: 38%;
+  font-weight: 600;
+  text-align: left;
+  color: #00d65f;
+  left: 0;
+  bottom: 0;
+}
+
+/*middle*/
+.bill-label {
+  display: inline-block;
+  margin: 0 -50%;
+  color: #8c8c8c;
+}
+
+.bill-date {
+  display: block;
+  white-space: nowrap;
+}
+
+/*right*/
+.second-bill-date {
+  position: absolute;
+  white-space: nowrap;
+  left: 85%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+
+
+
+/* -------------------------------------------------------------------- */
+/* -----------------------------Advantage------------------------------ */
+/* -------------------------------------------------------------------- */
+
+.advantage {
+  width: 100%;
+  min-height: 325px;
+  overflow-y: hidden;
+}
+
+/*flex for all containers*/
+.advantage .container {
+  display: flex;
+}
+/*reverse flow for middle one*/
+.middle-advantage .container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-flow: row-reverse;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: reverse;
+  -ms-flex-flow: row-reverse;
+  flex-flow: row-reverse;
+}
+
+/* Advantage section text part */
+.section-text {
+  width: 52%;
+  height: 100%;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  flex: 0 1 auto;
+  padding: 0 3rem 0 0;
+  z-index: 3;
+}
+
+.middle-advantage .section-text {
+  padding: 0 0 0 3rem;
+}
+
+/* Advantage section image part */
+.section-img {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+}
+
+/* Animation container margin in 1, 2(middle) and 3 sections*/
+.animation-container {
+  position: relative;
+  margin: -10% -5% -5% 0;
+}
+.last-advantage .animation-container {
+  margin: -5% -10% 0 0;
+}
+
+.middle-advantage .animation-container {
+  margin: -8% 0 -4% -15%;
+}
+
+/* ------Img part-----------*/
+/* meant section img, not all imges(not global!) */
+img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/*-------Video part--------*/
+
+.animation-video {
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* last section video little changes */
+
+.last-advantage .animation-video {
+  max-width: 63%;
+  max-height: 47%;
+  top: 34%;
+}
+
+.video {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: baseline;
+}
+
+/* -------GIF part----- */
+.animation-gif-container {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: #000;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  width: 60%;
+  min-width: 15rem;
+  padding: .5rem .75rem;
+  border: 2px solid rgba(255,255,255,.25);
+  box-shadow: 0 0 2rem 0 #000;
+  border-radius: .75rem;
+}
+
+.animation-gif-container::after {
+  width: 3rem;
+  height: 3.75rem;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  display: block;
+  background: url(../img/download-icon.gif) center center no-repeat;
+  background-size: 100%;
+  content: '';
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.animation-gif-image {
+  margin: 0 1rem 0 0;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.animation-gif-image img {
+  height: 3rem;
+}
+@media screen and (min-width:1450px) {
+  .animation-gif-image img {
+    height: 5rem;
+  }
+}
+
+.animation-text {
+  margin: .3rem 0;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.text-0 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.text-1 {
+  color: #0071eb;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* -----------------------------FAQ Section---------------------------- */
+/* -------------------------------------------------------------------- */
+
+#questions .faq-container {
+  text-align: center;
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+
+
+.faq-container ul.faq-list {
+  width: 75%;
+  margin: 2em auto;
+  max-width: 815px;
+  padding: 0;
+}
+
+li.faq-list-item {
+  list-style-type: none;
+  margin: 0 0 8px 0;
+}
+
+/*buttons-quetions*/
+button.faq-question {
+  padding: .8em 2.2em .8em 1.2em;
+  margin-bottom: 1px;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+  border: 0;
+  -webkit-appearance: pointer;
+  cursor: pointer;
+}
+
+button.faq-question, .faq-answer {
+  display: block;
+  text-align: left;
+  background: #303030;
+}
+
+button {
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* svg icon position/rotation */
+.svg-icon-thin-x {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1em;
+  width: 1em;
+  fill: #fff;
+}
+
+.svg-closed {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* hide the answer*/
+.faq-answer {
+  overflow: hidden;
+}
+
+.faq-answer.closed { 
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  -o-transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  -moz-transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  transition: max-height .25s cubic-bezier(.5,0,.1,1);
+}
+
+.faq-answer span {
+  display: inline-block;
+  padding: 1.2em;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+/* -----------------------------Footer--------------------------------- */
+/* -------------------------------------------------------------------- */
+
+footer .outer-container {
+  padding-right: 0;
+}
+
+footer .outer-container {
+  border-bottom: none; /* remove grey border*/
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  min-width: 190px;
+  width: 100%;
+  margin-top: 0;
+  padding-bottom: 20px;
+  font-size: 1em;
+  color: #a6a6a6;
+  position: relative;
+}
+
+.site-footer {
+  margin: 0 auto;
+  padding-top: 0;
+  width: 90%;
+}
+
+/*Questions ? Contact Us*/
+.footer-top {
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.footer-top-a {
+  color: #a6a6a6;
+}
+
+/* <ul class="footer-links structural"> */
+.footer-links {
+  max-width: 1000px;
+  font-size: 13px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul.structural {
+  padding: 0;
+  margin: 0;
+}
+
+/* <li class="footer-link-item"> */
+ul.structural > li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-link-item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 16px;
+  display: inline-block; 
+  min-width: 135px;
+  width: 24%;
+  padding-right: 12px; 
+  vertical-align: top;
+}
+
+
+
+/* <a class="footer-link"> */
+.footer-link {
+  color: #a6a6a6;
+}
+
+
+
+.footer-country {
+  font-size: 13px;
+  margin-top: 24px;
+}
+
+footer a:hover {
+  border-bottom: solid 1px;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* ------------------------(screen < 580px)---------------------------- */
+/* -------------------------------------------------------------------- */
+
+@media screen and (max-width: 580px) {
+
+  .hide-on-small {
+    display: none;
+  }
+
+  .outer-container {
+    padding: 50px 5%; /* -100px for all min-heights*/
+  }
+
+  #questions .outer-container {
+    padding: 50px 0;
+  }
+
+  /* ---min-heights--- */
+  #showcase {
+    min-height: 354px;
+  }
+  
+  #showcase .container {
+	padding-top: 6.5rem;
+  }
+
+  #billing-bar {
+    min-height: 365px;
+  }
+
+  /* ---fonts--- */
+  .container {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.75rem; /* showcase size (small) */
+    padding: 0 .5rem;
+  }
+
+  .section-title {
+    font-size: 1.625rem;
+  }
+
+  #showcase h2, #showcase span, 
+  .section-subtitle {
+    font-size: 1.125rem;
+  }
+
+  #questions .faq-container {
+    font-size: 1.25rem;
+}
+
+  .btn-primary {
+    font-size: 1rem;
+    letter-spacing: .1px;
+    margin-top: 0;
+  }
+
+  /* ---widget--- */
+  .trial-widget {
+    margin: 2rem 0;
+  }
+
+  .reminder-label {
+    width: 50%;
+    margin-left: -2.5em;
+  }
+
+  .reminder-label::after {
+    left: .6em;
+  }
+
+  
+  /* Advantage section text alignment*/
+  .section-text {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Advantage section image alignment */
+  .section-img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1em;
+  }
+
+  /* normal flow for all containers*/
+  .advantage .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+
+  /* Animation container margin in 1, 2(middle) and 3 sections */
+  .animation-container {
+    margin: -10% 0 0 0;
+  }
+
+  .last-advantage .animation-container {
+    margin: -5% 0 0 0;
+  }
+
+  .middle-advantage .animation-container {
+    margin: -8% 0 0 0;
+  }
+
+
+  /* align section-title */
+  .middle-advantage .section-text {
+    padding: 0;
+  }
+
+  /* FAQ */
+  .faq-container ul.faq-list {
+    width: 100%;
+    margin: 1.5em auto;
+  }
+
+  /* Footer */
+  
+
+  .site-footer {
+    margin-right: 0;
+  }
+
+  .footer-link-item {
+    width: 45%;
+  }
+}
+
+
+/* -------------------------------------------------------------------- */
+/* ----------------------(screen 581px:950px)-------------------------- */
+/* -------------------------------------------------------------------- */
+
+@media screen and (min-width: 581px) and (max-width: 950px) {
+  
+  .hide-on-small {
+    display: none;
+  }
+
+  /* ---min-heights--- */
+  #showcase {
+    min-height: 500px;
+  }
+  
+  #showcase .container {
+	padding-top: 8rem;
+  }
+
+  #billing-bar {
+    min-height: 400px;
+  }
+
+  /* ---fonts--- */
+  #showcase h1 {
+    font-size: 3.125rem;
+  }
+  
+  #showcase h2 {
+    font-size: 1.625rem;
+  }
+
+  #showcase span {
+    font-size: 1.125rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+  }
+
+  #questions .faq-container {
+    font-size: 1.25rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    letter-spacing: .1px;
+  }
+
+  /* Advantage section text alignment*/
+  .section-text {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* Advantage section image alignment */
+  .section-img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1em;
+  }
+
+  /* normal flow for all containers*/
+  .advantage .container {
+    font-size: 1.25rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* Animation container margin in 1, 2(middle) and 3 sections */
+  .animation-container {
+    margin: -10% 0 0 0;
+  }
+
+  .last-advantage .animation-container {
+    margin: -5% 0 0 0;
+  }
+
+  .middle-advantage .animation-container {
+    margin: -8% 0 0 0;
+  }
+
+  /* align section-title */
+  .middle-advantage .section-text {
+    padding: 0;
+  }
+
+  /* FAQ*/
+  .faq-container ul.faq-list {
+    width: 90%;
+    margin: 1.5em auto;
+  }
+
+  /* Footer */
+  .site-footer {
+    margin-right: 0;
+  }
+
+  .footer-link-item {
+    width: 32.5%;
+  }
+}
+
+
+
+
+/* -------------------------------------------------------------------- */
+/* -----------------------------Nav-panel------------------------------ */
+/* -------------------------------------------------------------------- */
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #303030;
+    color: #eee;
+    position: fixed;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+  nav li {
+    display: inline;
+    float: left;
+  }
+  nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+    text-decoration: none;
+  }
+  nav li:hover {
+    background-color: #444;
+  }
+  nav a#openup {
+    display: none;
+  }
+
+/* Nav on screen < 580px */
+
+  @media screen and (max-width: 580px) {
+    nav {
+      height: auto;
+      border-bottom: 0;
+    }
+    nav ul {
+      display: none;
+      height: auto;
+    }
+    nav li {
+      width: 100%;
+      float: left;
+      position: relative;
+    }
+    nav a {
+      text-align: left;
+      width: 100%;
+      text-indent: 25px;
+      background: #303030;
+      border-bottom: 1px solid #555;
+    }
+    nav a:hover {
+      background: #444;
+    }
+    nav a#openup:after {
+      content: '|||';
+      color: #eee;
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-90deg);
+      /* Safari and Chrome */
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 20px;
+    }
+    nav a#openup {
+      display: block;
+      background-color: #303030;
+      width: 100%;
+      position: relative;
+    }
+  }
+  .cf:before,
+  .cf:after {
+    content: '';
+    display: table;
+  }
+  
+  .cf:after {
+    clear: both;
+  }
+  
+  .cf {
+    zoom: 1;
+  }
+  
